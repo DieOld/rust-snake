@@ -110,7 +110,6 @@ impl Game {
     }
     
     fn check_for_lose(&mut self, head: (i32, i32)) {
-        println!("{:?}", head);
         let mut body_without_head = self.snake.body.clone();
         body_without_head.pop_front();
         if body_without_head.contains(&head) || ((head.0 < 0 || head.0 > 19) || (head.1 < 0 || head.1 > 19)) {
